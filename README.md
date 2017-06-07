@@ -35,6 +35,7 @@ To push the current branch and set the remote as upstream, use
 
 
 git 本地仓库中 如果在分支上修改了 没有提交  master也会发生变化  好神奇
-test
+ 
 貌似如果不是采用git commit -m "xxx"   而采用 git commit 之后再用git push 的话 推不上去？ 
+test  //测试通过了   就是如果不添加注释 直接commit的话  就推不上去  好神奇
 -------------------------------------------
