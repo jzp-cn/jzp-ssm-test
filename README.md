@@ -51,15 +51,27 @@ git 本地仓库中 如果在分支上修改了 没有提交  master也会发生
 test  //测试通过了   就是如果不添加注释 直接commit的话  就推不上去  好神奇
 --------------------------------------------------------------------------------------
 2017-06-08  update by jzp
+
 采用了不知道哪的思维 
+
 原来就是一个普通的项目
-现在我把它拆成了三个不同的项目，分为了 dao,service,dao,pojo，然后用一个父类把他们几个包起来叫 manager,最后用一个parent把manager包起来，将来会做成一个和manager的同级方法commons,包结构如下：
+
+现在我把它拆成了三个不同的项目，分为了 dao,service,dao,pojo，然后用一个父类把他们几个包起来叫 manager,最后用一个parent把manager包起来，将来会做成
+
+一个和manager的同级方法commons,包结构如下：
+
 --parent
+
  --commons(还没写)
+ 
  --manager
+ 
 	--pojo
+	
 	--dao
+	
 	--service
+	
 	--web
 	
 	
