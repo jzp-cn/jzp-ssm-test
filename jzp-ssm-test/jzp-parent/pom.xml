@@ -3,8 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jzp</groupId>
   <artifactId>jzp-parent</artifactId>
-  <packaging>war</packaging>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>jzp-manager</module>
+  </modules>
   <name>jzp-parent Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
