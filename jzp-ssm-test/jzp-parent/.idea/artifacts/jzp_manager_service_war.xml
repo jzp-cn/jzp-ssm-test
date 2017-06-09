@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jzp-manager-service:war">
+    <output-path>$PROJECT_DIR$/jzp-manager/jzp-manager-service/target</output-path>
+    <root id="archive" name="jzp-manager.war">
+      <element id="artifact" artifact-name="jzp-manager-service:war exploded" />
+    </root>
+  </artifact>
+</component>

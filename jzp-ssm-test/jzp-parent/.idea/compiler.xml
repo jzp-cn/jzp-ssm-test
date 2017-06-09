@@ -21,6 +21,10 @@
       <module name="jzp-manager-service" target="1.5" />
       <module name="jzp-manager-web" target="1.5" />
       <module name="jzp-parent" target="1.5" />
+      <module name="test-dubbo-provider" target="1.5" />
+      <module name="test-public-interface" target="1.5" />
+      <module name="test-web-consumer" target="1.5" />
+      <module name="test-web-sonsumer" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

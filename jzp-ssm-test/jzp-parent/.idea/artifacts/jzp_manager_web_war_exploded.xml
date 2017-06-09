@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="jzp-manager-web:war exploded">
-    <output-path>$PROJECT_DIR$/jzp-manager/jzp-manager-web/target/jzp-manager-web</output-path>
+    <output-path>$PROJECT_DIR$/jzp-manager-web/target/jzp-manager-web</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -54,10 +54,21 @@
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.4" />
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.9" />
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.0.9" />
+          <element id="library" level="project" name="Maven: com.alibaba:dubbo:2.5.3" />
+          <element id="library" level="project" name="Maven: org.springframework:spring:2.5.6.SEC03" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.15.0-GA" />
+          <element id="library" level="project" name="Maven: org.jboss.netty:netty:3.2.5.Final" />
+          <element id="library" level="project" name="Maven: org.apache.zookeeper:zookeeper:3.5.2-alpha" />
+          <element id="library" level="project" name="Maven: commons-cli:commons-cli:1.2" />
+          <element id="library" level="project" name="Maven: io.netty:netty:3.10.5.Final" />
+          <element id="library" level="project" name="Maven: net.java.dev.javacc:javacc:5.0" />
+          <element id="library" level="project" name="Maven: com.github.sgroschupf:zkclient:0.1" />
+          <element id="library" level="project" name="Maven: fastdfs_client:fastdfs_client:1.25" />
+          <element id="library" level="project" name="Maven: org.apache.activemq:activemq-all:5.11.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/jzp-manager/jzp-manager-web/target/jzp-manager-web/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/jzp-manager-web/target/jzp-manager-web/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="jzp-manager-web/web/Web" />
     </root>

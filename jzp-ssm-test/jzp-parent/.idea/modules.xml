@@ -7,7 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/jzp-manager/jzp-manager-dao/jzp-manager-dao.iml" filepath="$PROJECT_DIR$/jzp-manager/jzp-manager-dao/jzp-manager-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/jzp-manager/jzp-manager-pojo/jzp-manager-pojo.iml" filepath="$PROJECT_DIR$/jzp-manager/jzp-manager-pojo/jzp-manager-pojo.iml" />
       <module fileurl="file://$PROJECT_DIR$/jzp-manager/jzp-manager-service/jzp-manager-service.iml" filepath="$PROJECT_DIR$/jzp-manager/jzp-manager-service/jzp-manager-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jzp-manager/jzp-manager-web/jzp-manager-web.iml" filepath="$PROJECT_DIR$/jzp-manager/jzp-manager-web/jzp-manager-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jzp-manager-web/jzp-manager-web.iml" filepath="$PROJECT_DIR$/jzp-manager-web/jzp-manager-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/jzp-parent.iml" filepath="$PROJECT_DIR$/jzp-parent.iml" />
     </modules>
   </component>
