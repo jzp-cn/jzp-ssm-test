@@ -1,7 +1,7 @@
 package com.jzp.manager.service.impl;
 
 
-import com.jzp.manager.dao.UserDao;
+import com.jzp.manager.mapper.UserDao;
 import com.jzp.manager.pojo.User;
 import com.jzp.manager.service.UserService;
 import org.springframework.stereotype.Service;
