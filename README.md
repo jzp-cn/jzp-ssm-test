@@ -73,3 +73,32 @@ test  //测试通过了   就是如果不添加注释 直接commit的话  就
 还有就是 我是在\jzp\jzp-ssm-test后边还有一个jzp-ssm-test  感觉目录有问题
 
 
+仿照taotao商城就行修改
+
+里头用了它的数据库
+
+我把taotao 修改成jzp，然后他的po类的名称就是po，我看到不舒服，改成了pojo，然后集体替换的时候有个字段叫sell_point，替换成了sell_pojoint，一路修改
+
+最终成功
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
