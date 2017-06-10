@@ -10,8 +10,8 @@
 
 
     <dubbo:application name="jzp-manager-web"/>
-    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
+    <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>
     <dubbo:reference interface="com.jzp.manager.service.ItemService" id="itemService"/>
-
-<dubbo:service interface="com.jzp.manager.service.ItemService" ref="itemService"/>
+<!--
+<dubbo:service interface="com.jzp.manager.service.ItemService" ref="itemService"/>-->
 </beans>

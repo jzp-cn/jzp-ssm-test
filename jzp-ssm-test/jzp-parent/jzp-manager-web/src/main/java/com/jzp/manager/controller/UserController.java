@@ -1,16 +1,8 @@
 package com.jzp.manager.controller;
 
 
-import com.jzp.manager.pojo.User;
-import com.jzp.manager.service.UserService;
-import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 
 /**
@@ -21,7 +13,7 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController {
 
-    private Logger log = Logger.getLogger(UserController.class);
+  /*  private Logger log = Logger.getLogger(UserController.class);
     @Resource
     private UserService userService;
 
@@ -31,5 +23,5 @@ public class UserController {
         List<User> userList = userService.getAllUser();
         model.addAttribute("userList",userList);
         return "showUser";
-    }
+    }*/
 }

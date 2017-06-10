@@ -10,8 +10,8 @@
 
     <dubbo:application name="jzp-manager-service"/>
 
-    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
-    <dubbo:protocol name="dubbo" port="20880"/>
+    <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>
+    <dubbo:protocol name="dubbo" port="20881"/>
 
     <dubbo:service interface="com.jzp.manager.service.ItemService" ref="itemServiceImpl" timeout="10000000"/>
 </beans>

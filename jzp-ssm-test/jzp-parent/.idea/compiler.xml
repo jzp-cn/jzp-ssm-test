@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="jzp-commons" />
         <module name="jzp-manager-dao" />
+        <module name="jzp-manager-interface" />
         <module name="jzp-manager-pojo" />
         <module name="jzp-manager-service" />
         <module name="jzp-manager-web" />
@@ -17,6 +18,7 @@
       <module name="jzp-commons" target="1.5" />
       <module name="jzp-manager" target="1.5" />
       <module name="jzp-manager-dao" target="1.5" />
+      <module name="jzp-manager-interface" target="1.5" />
       <module name="jzp-manager-pojo" target="1.5" />
       <module name="jzp-manager-service" target="1.5" />
       <module name="jzp-manager-web" target="1.5" />

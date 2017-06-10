@@ -2,12 +2,11 @@ package com.jzp.manager.controller;
 
 import com.jzp.manager.pojo.TbItem;
 import com.jzp.manager.service.ItemService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.annotation.Resource;
 
 /**
  * Created by lenovo on 2017/6/9.
@@ -15,7 +14,8 @@ import javax.annotation.Resource;
 @Controller
 @RequestMapping("/item")
 public class ItemController {
-    @Resource(name = "itemService")
+
+    @Autowired
     private ItemService itemService;
 
     @RequestMapping("/test/{itemId}")

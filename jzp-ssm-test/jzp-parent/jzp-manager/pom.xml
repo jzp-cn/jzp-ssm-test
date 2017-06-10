@@ -15,6 +15,7 @@
         <module>jzp-manager-pojo</module>
         <module>jzp-manager-service</module>
         <module>jzp-manager-dao</module>
+        <module>jzp-manager-interface</module>
     </modules>
 
 
@@ -27,7 +28,7 @@
                 <version>9.3.19.v20170502</version>
                 <configuration>
                     <httpConnector>
-                        <port>8080</port>
+                        <port>8083</port>
                     </httpConnector>
                     <scanIntervalSeconds>10</scanIntervalSeconds>
                     <webAppConfig>
