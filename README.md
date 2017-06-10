@@ -7,7 +7,7 @@ notice: create the hole project , and run it .
 update by:
 
 ------------------------------------------
-2016-06-07 update by jzp
+##2016-06-07 update by jzp
 
 2017-06-07 $ git push fatal: Not a git repository (or any of the parent directories): .git
   --> git init 解决
@@ -46,11 +46,13 @@ To push the current branch and set the remote as upstream, use
 
 
 git 本地仓库中 如果在分支上修改了 没有提交  master也会发生变化  好神奇
- 
-貌似如果不是采用git commit -m "xxx"   而采用 git commit 之后再用git push 的话 推不上去？ 
-test  //测试通过了   就是如果不添加注释 直接commit的话  就推不上去  好神奇
+
+貌似如果不是采用git commit -m "xxx"   而采用 git commit 之后再用git push 的话 推不上去？
+
+test  //测试通过了   就是如果不添加注释 直接commit的话  就推不上去  好神奇
+
 --------------------------------------------------------------------------------------
-2017-06-08  update by jzp
+##2017-06-08  update by jzp
 
 采用了不知道哪的思维 
 
@@ -74,10 +76,10 @@ test  //测试通过了   就是如果不添加注释 直接commit的话  就
 	
 	--web
 	
-	
-	最后发现存在乱码问题，明天解决吧
+最后发现存在乱码问题，明天解决吧
+
 -------------------------------------------------------------
-2017-06-09  update by jzp
+##2017-06-09  update by jzp
 
 昨天晚上一直没有提交成功  现在才用git提交成功  
 今天是重新充git上clone 一份然后把新的覆盖掉旧的才提交成功的 
@@ -98,8 +100,23 @@ test  //测试通过了   就是如果不添加注释 直接commit的话  就
 为啥不能再目录里头有README.db????????????????*******************************
 
 
+-------------------------------------------------------
+##2017-06-10  update by jzp
+
+可以说是我花了两天时间把dubbo 搭起来了
+
+犯错无数 
+
+思路：把web层给抽出来作为dubbo的consumer，service抽出来作为dubbo的provider
+
+迷惑：不知道为什么要把service作为war包，感觉没必要。还有中间我开始没有把interface单独作为一个项目抽出来，启动失败了，不懂为什么不行
+
+参考：http://blog.csdn.net/congcong68/article/details/41113239
+
+虽然我是在window上搭建的，原理一致
 
 
+ps:知道怎么md文件的一丢丢操作了了，如果在--前边不留一行的话 字体会变大  好神奇
 
 
 
