@@ -1,0 +1,11 @@
+com\jzp\manager\mapper\TbOrderShippingMapper.class
+com\jzp\manager\mapper\TbItemMapper.class
+com\jzp\manager\mapper\TbItemParamMapper.class
+com\jzp\manager\mapper\UserDao.class
+com\jzp\manager\mapper\TbContentMapper.class
+com\jzp\manager\mapper\TbItemCatMapper.class
+com\jzp\manager\mapper\TbOrderMapper.class
+com\jzp\manager\mapper\TbContentCategoryMapper.class
+com\jzp\manager\mapper\TbUserMapper.class
+com\jzp\manager\mapper\TbItemParamItemMapper.class
+com\jzp\manager\mapper\TbOrderItemMapper.class
