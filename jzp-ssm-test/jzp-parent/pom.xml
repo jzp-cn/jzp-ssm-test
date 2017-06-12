@@ -16,36 +16,6 @@
     <module>jzp-manager-web</module>
   </modules>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-    <!-- spring 版本号-->
-    <spring.version>4.2.5.RELEASE</spring.version>
-
-    <!-- mybatis 版本号 -->
-    <mybatis.version>3.2.8</mybatis.version>
-
-    <!-- mysql 版本号 -->
-    <mysql-driver.version>5.1.29</mysql-driver.version>
-
-    <!--log4j日志包版本号-->
-    <slf4j.version>1.7.18</slf4j.version>
-    <log4j.version>1.2.17</log4j.version>
-
-    <!--数据库版本-->
-    <druid.version>1.0.9</druid.version>
-
-    <dubbo.version>2.5.3</dubbo.version>
-    <zookeeper.version>3.5.2-alpha</zookeeper.version>
-    <zkclient.version>0.1</zkclient.version>
-    <!-- fastdfs依赖 -->
-    <fastdfs_client.version>1.25</fastdfs_client.version>
-    <!-- activemq依赖 -->
-    <activemq.verion>5.11.2</activemq.verion>
-
-  </properties>
-
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -113,10 +83,10 @@
       <artifactId>spring-aop</artifactId>
       <version>${spring.version}</version>
     </dependency>  <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-aspects</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-aspects</artifactId>
+    <version>${spring.version}</version>
+  </dependency>
 
     <dependency>
       <groupId>org.springframework</groupId>
@@ -264,8 +234,122 @@
       <artifactId>activemq-all</artifactId>
       <version>${activemq.verion}</version>
     </dependency>-->
+    <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>${aspectjweaver.version}</version>
+    </dependency>
+    </dependencies>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+    <!-- spring 版本号-->
+    <spring.version>4.2.5.RELEASE</spring.version>
+
+    <!-- mybatis 版本号 -->
+    <mybatis.version>3.2.8</mybatis.version>
+
+    <!-- mysql 版本号 -->
+    <mysql-driver.version>5.1.29</mysql-driver.version>
+
+    <!--log4j日志包版本号-->
+    <slf4j.version>1.7.18</slf4j.version>
+    <log4j.version>1.2.17</log4j.version>
+
+    <!--数据库版本-->
+    <druid.version>1.0.9</druid.version>
+
+    <dubbo.version>2.5.3</dubbo.version>
+    <zookeeper.version>3.5.2-alpha</zookeeper.version>
+    <zkclient.version>0.1</zkclient.version>
+    <!-- fastdfs依赖 -->
+    <fastdfs_client.version>1.25</fastdfs_client.version>
+    <!-- activemq依赖 -->
+    <activemq.verion>5.11.2</activemq.verion>
+
+    <aspectjweaver.version>1.8.10</aspectjweaver.version>
+  </properties>
 
 
-  </dependencies>
+  <!-- 全局属性配置
+  <profiles>
+    &lt;!&ndash; 开发环境  &ndash;&gt;
+    <profile>
+      <id>dev</id>
+      <properties>
+        <env>dev</env>
+        <maven.test.skip>true</maven.test.skip>
+      </properties>
+      &lt;!&ndash; 设置默认环境 &ndash;&gt;
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+    &lt;!&ndash; 测试环境  &ndash;&gt;
+    <profile>
+      <id>test</id>
+      <properties>
+        <env>test</env>
+      </properties>
+    </profile>
+
+    &lt;!&ndash; 线上环境 &ndash;&gt;
+    <profile>
+      <id>main</id>
+      <properties>
+        &lt;!&ndash; 部署环境(对应配置文件版本) &ndash;&gt;
+        <env>main</env>
+      </properties>
+    </profile>
+
+    &lt;!&ndash; 233环境  预上线环境 &ndash;&gt;
+    <profile>
+      <id>prepare</id>
+      <properties>
+        &lt;!&ndash; 部署环境(对应配置文件版本) &ndash;&gt;
+        <env>prepare</env>
+      </properties>
+    </profile>
+    &lt;!&ndash; 233环境  测试 &ndash;&gt;
+    <profile>
+      <id>prepare-test</id>
+      <properties>
+        &lt;!&ndash; 部署环境(对应配置文件版本) &ndash;&gt;
+        <env>prepare-test</env>
+      </properties>
+    </profile>
+  </profiles>-->
+
+  <profiles>
+    <profile>
+      <!-- 本地开发环境 -->
+      <id>dev</id>
+      <properties>
+        <profiles.active>dev</profiles.active>
+      </properties>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+    <profile>
+      <!-- 测试环境 -->
+      <id>test</id>
+      <properties>
+        <profiles.active>test</profiles.active>
+      </properties>
+    </profile>
+    <profile>
+      <!-- 生产环境 -->
+      <id>pro</id>
+      <properties>
+        <profiles.active>pro</profiles.active>
+      </properties>
+    </profile>
+  </profiles>
+
+
 
 </project>

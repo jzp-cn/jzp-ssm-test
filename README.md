@@ -118,6 +118,33 @@ test  //测试通过了   就是如果不添加注释 直接commit的话  就推
 
 ps:知道怎么md文件的一丢丢操作了了，如果在--前边不留一行的话 字体会变大  好神奇
 
+-------------------------------------------------------------------------------
+##2017-06-12 update by jzp
+
+知道了@value 注解怎么用
+
+在controller 中 
+	
+	@Value("${db.username}")
+	private String username;
+
+在springmvc.xml中
+
+	<bean id="configProperties" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="ignoreResourceNotFound" value="true"/>
+        <property name="locations">
+			<list>
+                <value>classpath*:db.properties</value>
+            </list>
+        </property>
+    </bean
+
+就可以直接读取配置文件的信息
+	
+
+#Q：怎么读取到JZP-MANAGER-DAO中的PROPERTIES中的文件 
+
+我读取不到，我只能读取到同一个目录下的属性文件
 
 
 
