@@ -1,7 +1,7 @@
 # jzp-ssm-test
 
-creata time 2017-06-06
-notice: create the hole project , and run it .
+creata time 2017-06-06  
+notice: create the hole project 1.0 , and run it .
 
 
 update by:
