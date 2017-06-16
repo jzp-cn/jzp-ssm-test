@@ -20,7 +20,7 @@
 
 
     <build>
-        <finalName>jzp-manager</finalName>
+        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
@@ -37,6 +37,8 @@
                 </configuration>
             </plugin>
         </plugins>
+
+
     </build>
 
 

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/jzp-commons/config/config.iml" filepath="$PROJECT_DIR$/jzp-commons/config/config.iml" />
       <module fileurl="file://$PROJECT_DIR$/jzp-commons/jzp-commons.iml" filepath="$PROJECT_DIR$/jzp-commons/jzp-commons.iml" />
       <module fileurl="file://$PROJECT_DIR$/jzp-manager/jzp-manager.iml" filepath="$PROJECT_DIR$/jzp-manager/jzp-manager.iml" />
       <module fileurl="file://$PROJECT_DIR$/jzp-manager/jzp-manager-dao/jzp-manager-dao.iml" filepath="$PROJECT_DIR$/jzp-manager/jzp-manager-dao/jzp-manager-dao.iml" />

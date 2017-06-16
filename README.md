@@ -146,6 +146,114 @@ ps:知道怎么md文件的一丢丢操作了了，如果在--前边不留一行�
 
 我读取不到，我只能读取到同一个目录下的属性文件
 
+-----------------------------------------------------------------------
+2017-06-12 update by jzp
+
+中间不知道啥的出了点小意外，外边那个也是这个项目，反正最后我在这几天把麻溜的切换dev,test,prepare-Test环境的设置弄好了
+
+这是在jzp-parent.pom里头的
+
+	<profiles>
+    <!-- 开发环境  -->
+    <profile>
+      <id>dev</id>
+      <properties>
+        <env>dev</env>
+        <maven.test.skip>true</maven.test.skip>
+      </properties>
+      <!-- 设置默认环境 -->
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+    <!-- 测试环境  -->
+    <profile>
+      <id>test</id>
+      <properties>
+        <env>test</env>
+      </properties>
+    </profile>
+    <!-- 线上环境 -->
+    <profile>
+      <id>main</id>
+      <properties>
+        <!-- 部署环境(对应配置文件版本) -->
+        <env>main</env>
+      </properties>
+    </profile>
+
+    <!-- 233环境  预上线环境 -->
+    <profile>
+      <id>pre</id>
+      <properties>
+        <!-- 部署环境(对应配置文件版本) -->
+        <env>pre</env>
+      </properties>
+    </profile>
+    <!-- 233环境  测试 -->
+    <profile>
+      <id>prepare-test</id>
+      <properties>
+        <!-- 部署环境(对应配置文件版本) -->
+        <env>prepare-test</env>
+      </properties>
+    </profile>
+  </profiles>
+
+
+jzp-manager-dao  这里读取的是配置文件的文件
+
+          <!-- 先指定 src/test 下所有文件及文件夹为资源文件 -->
+            <resource>
+                <directory>src/dev</directory>
+                <targetPath>${project.build.directory}/classes</targetPath>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+            <!-- 根据env部署环境值，把对应环境的配置文件拷贝到classes目录 -->
+            <resource>
+                <directory>src/${env}</directory>
+                <targetPath>${project.build.directory}/classes</targetPath>
+                <filtering>true</filtering>
+            </resource>
+
+
+jzp-commons -->config
+
+	    <build>
+        <resources>
+            <!-- 先指定 src/test 下所有文件及文件夹为资源文件 -->
+            <resource>
+                <directory>../jzp-commons/config/src/dev</directory>
+                <targetPath>${project.build.directory}/classes</targetPath>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+            <!-- 根据env部署环境值，把对应环境的配置文件拷贝到classes目录 -->
+            <resource>
+                <directory>src/${env}</directory>
+                <targetPath>${project.build.directory}/classes</targetPath>
+                <filtering>true</filtering>
+            </resource>
+       	</resources>
+    	</build>
+
+过会测试一下  上头这两个感觉重复了
+
+最后再把三套不同的配置文件放入commons--->config中就行了
+
+
+
+晚上有空就把读写分离和事务的这里写一下
+
+-----------------------------------------------------------
+
+
+
 
 
 

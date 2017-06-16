@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="jzp-parent:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="jzp-parent.war">
-      <element id="artifact" artifact-name="jzp-parent:war exploded" />
-    </root>
-  </artifact>
-</component>

@@ -16,6 +16,56 @@
     <module>jzp-manager-web</module>
   </modules>
 
+  <!-- 全局属性配置 -->
+  <profiles>
+
+    <!-- 开发环境  -->
+    <profile>
+      <id>dev</id>
+      <properties>
+        <env>dev</env>
+        <maven.test.skip>true</maven.test.skip>
+      </properties>
+      <!-- 设置默认环境 -->
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+    <!-- 测试环境  -->
+    <profile>
+      <id>test</id>
+      <properties>
+        <env>test</env>
+      </properties>
+    </profile>
+
+    <!-- 线上环境 -->
+    <profile>
+      <id>main</id>
+      <properties>
+        <!-- 部署环境(对应配置文件版本) -->
+        <env>main</env>
+      </properties>
+    </profile>
+
+    <!-- 233环境  预上线环境 -->
+    <profile>
+      <id>pre</id>
+      <properties>
+        <!-- 部署环境(对应配置文件版本) -->
+        <env>pre</env>
+      </properties>
+    </profile>
+    <!-- 233环境  测试 -->
+    <profile>
+      <id>prepare-test</id>
+      <properties>
+        <!-- 部署环境(对应配置文件版本) -->
+        <env>prepare-test</env>
+      </properties>
+    </profile>
+  </profiles>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -234,13 +284,16 @@
       <artifactId>activemq-all</artifactId>
       <version>${activemq.verion}</version>
     </dependency>-->
-    <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+
+    <!--Redis -->
     <dependency>
-      <groupId>org.aspectj</groupId>
-      <artifactId>aspectjweaver</artifactId>
-      <version>${aspectjweaver.version}</version>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+      <version>${redis.version}</version>
+      <type>jar</type>
+      <scope>compile</scope>
     </dependency>
-    </dependencies>
+  </dependencies>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -270,7 +323,8 @@
     <!-- activemq依赖 -->
     <activemq.verion>5.11.2</activemq.verion>
 
-    <aspectjweaver.version>1.8.10</aspectjweaver.version>
+    <redis.version>2.9.0</redis.version>
+
   </properties>
 
 
@@ -322,33 +376,6 @@
       </properties>
     </profile>
   </profiles>-->
-
-  <profiles>
-    <profile>
-      <!-- 本地开发环境 -->
-      <id>dev</id>
-      <properties>
-        <profiles.active>dev</profiles.active>
-      </properties>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-    </profile>
-    <profile>
-      <!-- 测试环境 -->
-      <id>test</id>
-      <properties>
-        <profiles.active>test</profiles.active>
-      </properties>
-    </profile>
-    <profile>
-      <!-- 生产环境 -->
-      <id>pro</id>
-      <properties>
-        <profiles.active>pro</profiles.active>
-      </properties>
-    </profile>
-  </profiles>
 
 
 

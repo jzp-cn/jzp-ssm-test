@@ -17,10 +17,16 @@
             <artifactId>jzp-manager-pojo</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.jzp</groupId>
+            <artifactId>config</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <!-- 如果不添加此节点mybatis的mapper.xml文件都会被漏掉。 -->
     <build>
+        <finalName>${project.artifactId}</finalName>
         <resources>
             <resource>
                 <directory>src/main/java</directory>
@@ -38,6 +44,30 @@
                 </includes>
                 <filtering>false</filtering>
             </resource>
+            <!-- 先指定 src/test 下所有文件及文件夹为资源文件 -->
+            <resource>
+                <directory>src/dev</directory>
+                <targetPath>${project.build.directory}/classes</targetPath>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+            <!-- 根据env部署环境值，把对应环境的配置文件拷贝到classes目录 -->
+            <resource>
+                <directory>src/${env}</directory>
+                <targetPath>${project.build.directory}/classes</targetPath>
+                <filtering>true</filtering>
+            </resource>
+            <!--<resource>
+                <directory>bin</directory>
+                <targetPath>${project.build.directory}/bin</targetPath>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>-->
         </resources>
     </build>
+
 </project>

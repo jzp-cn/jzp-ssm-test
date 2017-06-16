@@ -43,4 +43,5 @@
         <aop:advisor advice-ref="txAdvice"
                      pointcut="execution(* com.jzp.manager.service.impl.*.*(..))" />
     </aop:config>
+
 </beans>
